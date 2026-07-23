@@ -170,3 +170,52 @@
 #### Questions for mentor
 - Should the CSV Cleaner support more cleaning options, such as lowercasing email addresses or validating required columns?
 - Should logging output also be written to a log file?
+
+
+## Session 07 - File Renamer
+
+#### What was worked on
+- A File Renamer command-line tool was implemented.
+- Example files were created under `examples/files/`.
+- The tool was designed to batch rename files in a selected directory.
+- Dry-run mode was added as the default behaviour to preview rename actions safely.
+- The `--apply` flag was added to perform actual file renaming.
+- Options were added for replacing spaces, converting filenames to lowercase, and adding a prefix.
+- Logging was used to show scanned files and planned rename actions.
+- Custom error handling was added for missing directories and invalid paths.
+
+#### What was learned
+- `pathlib.Path` can be used to work with files and directories in a clean, readable way.
+- `Path.iterdir()` can be used to scan files inside a directory.
+- `Path.rename()` can be used to rename files.
+- Dry-run mode is important for tools that modify files because it prevents accidental changes.
+- A rename plan can be created before applying changes, making the tool safer.
+- Checking for existing target files helps prevent accidental overwrites.
+- Logging is useful for showing what the tool is doing without relying on simple `print()` statements.
+- A `dataclass` can group renaming options into one configuration object.
+
+#### Test results
+-#### Test results
+- 27 tests were collected.
+- 27 tests passed.
+- 9 File Renamer tests passed.
+- Existing CSV Cleaner, JSON Formatter and Password Generator tests continued to pass.
+- File Renamer tests covered:
+  - finding files in a directory
+  - rejecting missing directories
+  - replacing spaces with underscores
+  - lowercasing filenames and extensions
+  - adding prefixes
+  - skipping files that do not need changes
+  - detecting existing target files
+  - confirming dry-run mode does not rename files
+  - confirming apply mode actually renames files
+
+#### Issues encountered
+- It was confirmed that dry-run mode does not create files by itself.
+- Example files must exist before dry-run mode can preview rename actions.
+- After applying the rename once, running dry-run again may show that no files need to be renamed because the filenames are already clean.
+
+#### Questions for mentor
+- Is dry-run mode the preferred default for tools that modify files? Is that common practice?
+- When should we branch as a general practice? I have a general idea but how do professionals do it? While commiting, is it a good practice to use `git add .` rather than adding only the files being updated?

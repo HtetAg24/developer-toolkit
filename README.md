@@ -60,6 +60,27 @@ Supports keeping duplicate rows
 Uses logging for progress messages
 Uses custom exceptions for cleaner error handling
 
+### 4. File Renamer
+
+The File Renamer is a command-line tool that batch renames files in a directory.
+
+It supports safe preview mode by default, so rename actions can be reviewed before files are actually changed.
+
+Location: src/developer_toolkit/file_renamer.py
+
+Features:
+
+Scans files in a selected directory
+Replaces spaces with underscores
+Converts filenames and extensions to lowercase
+Supports adding a custom prefix
+Uses dry-run mode by default
+Requires --apply before actual renaming happens
+Checks for missing directories
+Checks for existing target files
+Uses logging for progress messages
+Uses custom exceptions for clearer error handling
+
 
 ## Setup
 
