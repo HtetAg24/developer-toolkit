@@ -4,28 +4,6 @@ This repository contains small Python command-line tools built during Month One 
 
 The purpose of this repository is to practise professional software engineering foundations, including Python, Git, Linux/WSL, command-line tools, JSON handling, file input/output, validation, error handling, documentation, and meaningful Git history.
 
-## Repository Structure
-
-developer-toolkit/
-├── src/
-│   └── developer_toolkit/
-│       ├── __init__.py
-│       ├── json_formatter.py
-│       └── password_generator.py
-├── tests/
-│   ├── test_json_formatter.py
-│   └── test_password_generator.py
-├── docs/
-│   └── learning_journal.md
-├── examples/
-│   └── json/
-├── practice/
-├── requirements.txt
-├── .python-version
-├── .gitignore
-└── README.md
-
-
 ## Tools Completed
 
 ### 1. JSON Formatter
