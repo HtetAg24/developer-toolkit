@@ -28,7 +28,7 @@ developer-toolkit/
 
 ## Tools Completed
 
-1. JSON Formatter
+### 1. JSON Formatter
 
 The JSON Formatter is a command-line tool that reads a JSON file, formats it into a readable structure, and saves the result to an output file.
 
@@ -45,7 +45,7 @@ Handles missing files
 Handles invalid JSON syntax
 
 
-2. Password Generator
+### 2. Password Generator
 
 The Password Generator is a command-line tool that generates secure random passwords using Python's secrets module.
 
@@ -62,6 +62,26 @@ Supports excluding digits
 Supports excluding symbols
 Handles invalid password length
 Handles invalid character selection
+
+
+### 3. CSV Cleaner
+
+The CSV Cleaner is a command-line tool that reads a messy CSV file, removes extra spaces, removes empty rows, removes duplicate rows, and saves a cleaned CSV file.
+
+Location: src/developer_toolkit/csv_cleaner.py
+
+Features:
+
+Reads CSV files
+Trims spaces from headers and values
+Removes empty rows
+Removes duplicate rows
+Supports custom output path
+Supports keeping empty rows
+Supports keeping duplicate rows
+Uses logging for progress messages
+Uses custom exceptions for cleaner error handling
+
 
 ## Setup
 

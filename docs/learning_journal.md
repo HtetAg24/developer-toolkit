@@ -133,3 +133,40 @@
 
 #### Questions for mentor
 - As this is my first time usiing `pytest`, I tried it with much support from AI. But tried to understand each and every line of code. If possible, I want a feed back on the quality of the code written and the performance of `pytest`.
+
+
+## Session 06 - CSV Cleaner
+
+#### What was worked on
+- A CSV Cleaner command-line tool was implemented.
+- A messy CSV example file was created under `examples/csv/`.
+- The tool was designed to load CSV data, clean rows, remove empty rows, remove duplicate rows, and save the cleaned result.
+- Type hints were added to make function inputs and outputs clearer.
+- A `dataclass` was used to store CSV cleaner configuration.
+- Logging was added to show progress during execution.
+- A custom exception class was added for CSV cleaner-specific errors.
+- Automated pytest tests were added for the CSV Cleaner.
+
+#### What was learned
+- Python's built-in `csv` module can be used to read and write CSV files.
+- `csv.DictReader` reads CSV rows as dictionaries.
+- `csv.DictWriter` writes dictionaries back into CSV format.
+- `dataclass` can be used to group related configuration values cleanly.
+- Logging is more professional than using `print()` for application progress messages.
+- Custom exceptions make tool-specific errors clearer.
+- Type hints improve readability and make the code easier to maintain.
+- `pytest` can test small cleaning functions and full file input/output workflows.
+
+#### Test results
+- 18 tests were collected.
+- 18 tests passed.
+- 8 CSV Cleaner tests passed.
+- Existing JSON Formatter and Password Generator tests continued to pass.
+
+#### Issues encountered
+- No test failure was encountered during the full test run.
+- Temporary output files should be reviewed before committing so that only useful example files are kept in the repository.
+
+#### Questions for mentor
+- Should the CSV Cleaner support more cleaning options, such as lowercasing email addresses or validating required columns?
+- Should logging output also be written to a log file?
