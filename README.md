@@ -87,3 +87,13 @@ python --version
 Expected Python version:
 
 Python 3.13.14
+
+
+## Running Tests
+
+The project uses `pytest` for automated testing.
+
+Run the full test suite with:
+
+```bash
+python -m pytest -v
