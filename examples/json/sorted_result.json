@@ -1,0 +1,16 @@
+{
+  "name": "Htet",
+  "progress": {
+    "python_313": true,
+    "ssh_setup": true,
+    "venv": true
+  },
+  "role": "AI Engineering Trainee",
+  "skills": [
+    "Python",
+    "Git",
+    "Linux",
+    "JSON"
+  ],
+  "week": 1
+}
