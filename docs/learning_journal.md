@@ -101,3 +101,35 @@
 #### Questions for mentor
 - Is terminal output sufficient for this tool, or should it support saving generated passwords to a local file?
 - Are there preferred password policy rules that should be followed in real life scenarios other than what was applied in this tool?
+
+
+## Session 05 - Pytest Tests for Developer Tools
+
+#### What was worked on
+- Automated tests were added for the JSON Formatter and Password Generator tools.
+- `pytest` was installed and added to `requirements.txt`.
+- A `pyproject.toml` file was added to configure the project package structure.
+- The project was installed in editable mode using `python -m pip install -e .`.
+- Tests were written under the `tests/` folder.
+- The full test suite was run successfully.
+
+#### What was learned
+- `pytest` can be used to test individual functions automatically.
+- `assert` statements are used to check expected behaviour.
+- `pytest.raises()` can be used to test expected errors.
+- `tmp_path` provides a temporary directory for safely testing file input/output.
+- Installing the project in editable mode allows test files to import source code from the `src/` folder.
+- Automated tests make the project more reliable and easier to review.
+
+#### Test results
+- 10 tests were collected.
+- 10 tests passed.
+- JSON Formatter tests passed successfully.
+- Password Generator tests passed successfully.
+
+#### Issues encountered
+- No test failure was encountered during the first full test run.
+- The test setup required adding `pyproject.toml` so the package could be imported cleanly from the `src/` layout.
+
+#### Questions for mentor
+- As this is my first time usiing `pytest`, I tried it with much support from AI. But tried to understand each and every line of code. If possible, I want a feed back on the quality of the code written and the performance of `pytest`.
