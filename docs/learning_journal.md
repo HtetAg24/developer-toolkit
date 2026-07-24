@@ -195,9 +195,7 @@
 - A `dataclass` can group renaming options into one configuration object.
 
 #### Test results
--#### Test results
-- 27 tests were collected.
-- 27 tests passed.
+
 - 9 File Renamer tests passed.
 - Existing CSV Cleaner, JSON Formatter and Password Generator tests continued to pass.
 - File Renamer tests covered:
@@ -219,3 +217,42 @@
 #### Questions for mentor
 - Is dry-run mode the preferred default for tools that modify files? Is that common practice?
 - When should we branch as a general practice? I have a general idea but how do professionals do it? While commiting, is it a good practice to use `git add .` rather than adding only the files being updated?
+
+
+## Session 08 - Log Analyzer
+
+#### What was worked on
+- A Log Analyzer command-line tool was implemented.
+- An example log file was created under `examples/logs/`.
+- The tool was designed to load log lines, parse structured log records, count log levels, detect invalid lines, filter records by level, and optionally save a JSON summary.
+- Type hints and dataclasses were used to make the data structures clearer.
+- Custom error handling was added for missing files, invalid paths, and unknown level filters.
+- Automated pytest tests were added for the Log Analyzer.
+
+#### What was learned
+- Log files can be parsed by splitting each line into date, time, level, and message.
+- `dataclass` is useful for representing structured records such as `LogRecord`.
+- `collections.Counter` can count repeated values such as log levels.
+- Filtering logic can be separated into its own function to make the tool easier to test.
+- JSON output is useful for saving analysis summaries in a machine-readable format.
+- Automated tests can check parsing, counting, filtering, error handling, and full workflow behaviour.
+
+#### Test results
+
+- Log Analyzer tests covered:
+  - loading log files
+  - rejecting missing files
+  - parsing valid log lines
+  - rejecting malformed log lines
+  - rejecting unknown log levels
+  - counting log levels
+  - detecting invalid lines
+  - filtering records by level
+  - saving JSON summaries
+  - running the full analysis workflow
+
+#### Issues encountered
+- None
+
+#### Questions for mentor
+- I may have a more meaningful question after the review later.

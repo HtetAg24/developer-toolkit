@@ -81,6 +81,24 @@ Checks for existing target files
 Uses logging for progress messages
 Uses custom exceptions for clearer error handling
 
+### 5. Log Analyzer
+
+The Log Analyzer is a command-line tool that reads a log file, parses structured log lines, counts log levels, identifies invalid lines, filters records by level, and optionally saves a JSON summary.
+
+Location: src/developer_toolkit/log_analyzer.py
+
+Features:
+
+Reads log files
+Parses log lines into structured records
+Counts log levels such as `INFO`, `WARNING`, `ERROR`, and `CRITICAL`
+Detects invalid or malformed log lines
+Supports filtering records by log level
+Supports saving a summary as JSON
+Uses dataclasses for structured data
+Uses custom exceptions for clearer error handling
+Uses logging for progress messages
+
 
 ## Setup
 
